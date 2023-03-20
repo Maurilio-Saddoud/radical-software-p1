@@ -1,0 +1,24 @@
+.joint-container {
+    width: 20px;
+    position: absolute;
+    top: 70px;
+  }
+  
+  .top-joint {
+    width: 20px;
+    height: 30px;
+    background-color: #5E1E1E;
+    z-index: 1;
+    box-shadow: 3px 0px 3px 0px #000;
+    /* position: relative; */
+    /* top: 70px; */
+  }
+  
+  .middle-joint {
+    z-index: 1;
+    width: 20px;
+    height: 10vh;
+    background-color: #5E1E1E;
+    position: relative;
+    box-shadow: 3px 0px 4px #000;
+  }

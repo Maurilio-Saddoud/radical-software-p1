@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  overflow: hidden;
+}
+
+.mobile {
+  width: 100%;
+}
+
+.full-screen {
+  width: 100%;
+}
+
+.ad-wall-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(41, 41, 41);
+  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: none;
+  flex-direction: column;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  border-style: none;
+  background-color: black;
+  color: white;
+  opacity: 70%;
+  display: none;
+  position: relative;
+  right: 0px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.skip-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 60px;
+}
+
+
+@media screen and (max-width: 890px) {
+  .full-screen {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .mobile {
+    display: block !important;
   }
+  body {
+    overflow: auto;
+  }
+}
+
+@keyframes red-blinking {
+  0% {
+    box-shadow: 2px 2px 3px 0px #000;
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px red;
+  }
+}
+.red-blink {
+  animation: red-blinking .5s infinite;
+}
+
+@keyframes yellow-blinking {
+  0% {
+    box-shadow: 2px 2px 3px 0px #000;
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px yellow;
+  }
+}
+
+@keyframes green-blinking {
+  0% {
+    box-shadow: 2px 2px 3px 0px #000;
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px green;
+  }
+}
+
+.red-blink {
+  animation: red-blinking .5s infinite;
+}
+
+.red-on {
+  box-shadow: 0px 0px 20px 5px red !important;
+}
+
+.yellow-on {
+  box-shadow: 0px 0px 20px 5px yellow !important;
+}
+
+.yellow-blink {
+  animation: yellow-blinking .5s infinite;
+}
+
+.green-blink {
+  animation: green-blinking .5s infinite;
 }
